@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script defer src="js/all.js"></script>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super IPtv - solution rapid pour TV</title>
+    <style>
+        .divbtn{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <div class="parallax-container"  style="max-height: 100px"> -->
+        <nav class="deep-purple lighten-1">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">IPtv</a>
+                    <a href="#" data-activates="mobile-nav" class="button-collapse">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="index.html">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="tuto.html">Tutorial</a>
+                        </li>
+    
+                    </ul>
+                    <ul class="side-nav" id="mobile-nav">
+                        <h4 class="purple-text text-darken-4 center">Super IPtv</h4>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-home grey-text text-darken-4"></i>Accueil</a>
+                        </li>
+                        <li>
+                            <a href="tuto.html">
+                                <i class="fa fa-cog grey-text text-darken-4"></i>tutorial</a>
+                        </li>
+                        <li>
+                            <a href="solutions.html">
+                                <i class="fa fa-users grey-text text-darken-4"></i> Nos offres</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+    
+    </header>
+
+    <div class="container grey lighten-4">
+       <div class="row">
+           <div class="col m12 row1 center"><h2 class="center-align">tutorial ipTV sur pc</h2></div>
+           <div class="col m12">
+               <ol>
+                   <li>telecharger votre fichier .m3u</li>
+                   <li>instaler VLC media player</li>
+                   <li>ouvrir votre fichier m3u avec vlc </li>
+                   <li>choisir les chaines </li>
+                   <li>enjoy</li>
+               </ol>
+           </div>
+       </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+        var lien = getParameterByName('lien');
+        if(lien){
+            const pageUI = document.querySelector('.row1');
+            let btn = document.createElement('a')
+            btn.className = "btn-large blue btn waves-effect waves-light center-align";
+            btn.href = lien;
+            btn.textContent = 'download'
+            let divbtn = document.createElement('div');
+            divbtn.className = "divbtn"
+            divbtn.appendChild(btn)
+            // pageUI.firstElementChild.insertBefore()
+            pageUI.insertBefore(divbtn, pageUI.firstElementChild.nextSibling);
+        }
+        // let body = document.querySelector('body')
+        // body.innerHTML = ' <div class="container"> <div class="button" ><a class="btn-large blue btn waves-effect waves-light" href = '+lien+'>download</a></div > </div>'
+        // console.log(lien)
+
+
+
+    </script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>
