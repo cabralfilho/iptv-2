@@ -14,10 +14,13 @@
   <title>Super IPtv - solution rapid pour TV</title>
 </head>
 <style>
+  html{
+    height: 100%;
+    width: 100%;
+  }
   .spinner.loading {
-  
   padding: 50px;
-  position: absolute;
+  position: fixed;
   text-align: center;
   height: 100%;
   width:100%;
@@ -163,7 +166,7 @@
                 I am convenient because I require little markup to use effectively.</p>
               </div>
               <div class="card-action">
-                <form action="http://127.0.0.1:3000/pay" method="post">
+                <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
                   <input type="hidden" name="id" value="3">
 
                   <button name="name" value="submit" type="submit" class="btn-large blue btn waves-effect waves-light" style="width: 100%">
@@ -223,7 +226,18 @@
     $(document).ready(function () {
       $('.button-collapse').sideNav();
       $('.parallax').parallax();
+
+      //loading effect
+      document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', (e) => {
+          console.log(e)
+          document.querySelector('.spinner.loading').style.display = "block";
+        })
+      });
+      
     });
+    
+    
   </script>
 </body>
 
