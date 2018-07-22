@@ -33,7 +33,9 @@
  .div{
    height: 5rem;
  }
-
+.col.s12.m4.box .card-panel{
+  min-height: 200px;
+}
  /* .section-about .container{
    color: #fff;
    padding-top: 5rem;
