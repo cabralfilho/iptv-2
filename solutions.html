@@ -52,10 +52,11 @@
 }
 </style>
 <body>
-<div class="spinner loading" style="display: none"></div>
+
+
+<div class="spinner loading" style="display: none"></div> <!--wait effect-->
     
       <header >
-        <!-- <div class="parallax-container"  style="max-height: 100px"> -->
           <nav class="deep-purple lighten-1">
             <div class="container">
               <div class="nav-wrapper">
@@ -93,22 +94,6 @@
               </div>
             </div>
           </nav>
-          <!-- Showcase
-          <div class="showcase container ">
-            <div class="row">
-              <div class="col s12 m10 offset-m1 center">
-                <h5>Welcome To Super IPtv</h5>
-                <h1>Lorem ipsum dolor</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit fugit deserunt quos provident aliquam inventore.</p>
-                
-              </div>
-            </div>
-          </div>
-          <div class="parallax ">
-            <img src="img/bg2.jpg">
-          </div>
-        </div> -->
-      
       </header>
 
 
@@ -117,6 +102,7 @@
         <hr>
         <h5><strong>Note</strong> : après le payement vous serez redirigé vers une page qui contient votre code d'abonnement </h5>
         <div class="row">
+
           <div class="col m4 s12">
               <div class="card hoverable">
                 <div class="card-image">
@@ -150,11 +136,12 @@
                   <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
                     <input type="hidden" name="id" value="2">
                     <input type="hidden" class="email" name="email">
-                    <button class="btn-large blue btn waves-effect waves-light submitBtn" style="width: 100%"><h5><i class="fab fa-paypal left"></i>25€</h5></button></button>
+                    <button class="btn-large blue btn waves-effect waves-light submitBtn" style="width: 100%"><h5><i class="fab fa-paypal left"></i>25€</h5></button>
                   </form>
                 </div>
              </div>
           </div>
+
           <div class="col m4 s12">
             <div class="card hoverable">
               <div class="card-image">
@@ -174,9 +161,32 @@
             </div>
           </div>
           </div>
+
+          <div class="col m4 s12 offset-m4">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img src="img/bg2.jpg">
+                <span class="card-title center-align">Abonnement IPTV PREMIUM -Test 24H</span>
+              </div>
+              <div class="card-content">
+                <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
+              </div>
+              <div class="card-action">
+                <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
+                  <input type="hidden" name="id" value="4">
+                  <input type="hidden" class="email" name="email">
+                  <button class="btn-large blue btn waves-effect waves-light submitBtn" id='btn' style="width: 100%">
+                    <h5>
+                      <i class="fab fa-paypal left"></i>1€</h5>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
           
-        </div>
       </div>
+     
+    </div>
 
 
 
@@ -212,49 +222,3 @@
 
         <div class="footer-copyright deep-purple darken-1">
           <div class="container">
-            L.mustapha &copy; 2018
-            <!-- <a class="grey-text text-lighten-4 right" href="#!">Terms & Conditions</a> -->
-          </div>
-        </div>
-      </footer>
-
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.button-collapse').sideNav();
-      $('.parallax').parallax();
-      document.querySelectorAll('.submitBtn').forEach(btn => {
-        btn.addEventListener('click',(e)=>{
-              e.preventDefault()
-               var email = prompt('entrez votre email : ');
-               var re = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ ;
-
-               if(re.test(String(email).toLowerCase()) ){
-                  document.querySelectorAll(".email").forEach(input=>{
-                    input.value = email;
-                    document.querySelector('.spinner.loading').style.display = "block";
-                    e.target.parentElement.parentElement.submit()
-                  })
-                  
-               }
-               
-        })
-      })
-      //loading effect
-      document.querySelectorAll('form').forEach(form => {
-        form.addEventListener('submit', (e) => {
-
-          // document.querySelector('.spinner.loading').style.display = "block";
-
-        })
-      });
-      
-    });
-    
-    
-  </script>
-</body>
-
-</html>
