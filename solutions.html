@@ -14,211 +14,251 @@
   <title>Super IPtv - solution rapid pour TV</title>
 </head>
 <style>
-  html{
+  html {
     height: 100%;
     width: 100%;
   }
+
   .spinner.loading {
-  padding: 50px;
-  position: fixed;
-  text-align: center;
-  height: 100%;
-  width:100%;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.7)
-}
-
-.spinner.loading:before {
-  content: "";
-  height: 80px;
-  width: 80px;
-  margin: -15px auto auto -15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #2180c0 rgba(204, 204, 204, 0.87) rgba(204, 204, 204, 0.897);
-  border-radius: 100%;
-  animation: rotation .7s infinite linear;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  } to {
-    transform: rotate(359deg);
+    padding: 50px;
+    position: fixed;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.7)
   }
-}
+
+  .spinner.loading:before {
+    content: "";
+    height: 80px;
+    width: 80px;
+    margin: -15px auto auto -15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #2180c0 rgba(204, 204, 204, 0.87) rgba(204, 204, 204, 0.897);
+    border-radius: 100%;
+    animation: rotation .7s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
 </style>
+
 <body>
+  <div class="spinner loading" style="display: none"></div>
 
+  <header>
+    <!-- <div class="parallax-container"  style="max-height: 100px"> -->
+    <nav class="deep-purple lighten-1">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">IPtv</a>
+          <a href="#" data-activates="mobile-nav" class="button-collapse">
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="index.html">Accueil</a>
+            </li>
+            <li>
+              <a href="tuto.html">Tutorial</a>
+            </li>
 
-<div class="spinner loading" style="display: none"></div> <!--wait effect-->
-    
-      <header >
-          <nav class="deep-purple lighten-1">
-            <div class="container">
-              <div class="nav-wrapper">
-                <a href="#" class="brand-logo">IPtv</a>
-                <a href="#" data-activates="mobile-nav" class="button-collapse">
-                  <i class="fa fa-bars"></i>
-                </a>
-                <ul class="right hide-on-med-and-down">
-                  <li>
-                    <a href="index.html">Accueil</a>
-                  </li>
-                  <li>
-                    <a href="tuto.html">Tutorial</a>
-                  </li>
-                  
-                </ul>
-                <ul class="side-nav" id="mobile-nav">
-                  <h4 class="purple-text text-darken-4 center">Super IPtv</h4>
-                  <li>
-                    <div class="divider"></div>
-                  </li>
-                  <li>
-                    <a href="index.html">
-                      <i class="fa fa-home grey-text text-darken-4"></i>Accueil</a>
-                  </li>
-                  <li>
-                    <a href="tuto.html">
-                      <i class="fa fa-cog grey-text text-darken-4"></i>tutorial</a>
-                  </li>
-                  <li>
-                    <a href="solutions.html">
-                      <i class="fa fa-users grey-text text-darken-4"></i> Nos offres</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-      </header>
-
-
-      <div class="section container">
-        <h3 class="center-align">DÉCOUVREZ NOS OFFRES ABONNEMENT IPTV : </h3>
-        <hr>
-        <h5><strong>Note</strong> : après le payement vous serez redirigé vers une page qui contient votre code d'abonnement </h5>
-        <div class="row">
-
-          <div class="col m4 s12">
-              <div class="card hoverable">
-                <div class="card-image">
-                    <img src="img/bg2.jpg">
-                    <span class="card-title center-align">Abonnement IPTV PREMIUM - 3 mois</span>
-                </div>
-                <div class="card-content">
-                  <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
-                </div>
-                <div class="card-action">
-                  <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
-                    <input type="hidden" name="id" value="1">
-                    <input type="hidden" class="email" name="email">
-                    <button class="btn-large blue btn waves-effect waves-light submitBtn" style="width: 100%">
-                      <h5><i class="fab fa-paypal left"></i>15€</h5></button>
-                  </form>
-                </div>
-              </div>
-          </div>
-
-          <div class="col m4 s12">
-              <div class="card hoverable">
-                <div class="card-image">
-                  <img src="img/bg2.jpg">
-                  <span class="card-title center-align">Abonnement IPTV PREMIUM - 6 mois</span>
-                </div>
-                <div class="card-content">
-                  <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
-                </div>
-                <div class="card-action">
-                  <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
-                    <input type="hidden" name="id" value="2">
-                    <input type="hidden" class="email" name="email">
-                    <button class="btn-large blue btn waves-effect waves-light submitBtn" style="width: 100%"><h5><i class="fab fa-paypal left"></i>25€</h5></button>
-                  </form>
-                </div>
-             </div>
-          </div>
-
-          <div class="col m4 s12">
-            <div class="card hoverable">
-              <div class="card-image">
-                <img src="img/bg2.jpg">
-                <span class="card-title center-align">Abonnement IPTV PREMIUM - 12 mois</span>
-              </div>
-              <div class="card-content">
-                <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
-              </div>
-              <div class="card-action">
-                <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
-                  <input type="hidden" name="id" value="3">
-                  <input type="hidden" class="email" name="email">
-                  <button   class="btn-large blue btn waves-effect waves-light submitBtn" id = 'btn' style="width: 100%">
-                    <h5><i class="fab fa-paypal left"></i>35€</h5></button>
-                </form>              
-            </div>
-          </div>
-          </div>
-
-          <div class="col m4 s12 offset-m4">
-            <div class="card hoverable">
-              <div class="card-image">
-                <img src="img/bg2.jpg">
-                <span class="card-title center-align">Abonnement IPTV PREMIUM -Test 24H</span>
-              </div>
-              <div class="card-content">
-                <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
-              </div>
-              <div class="card-action">
-                <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
-                  <input type="hidden" name="id" value="4">
-                  <input type="hidden" class="email" name="email">
-                  <button class="btn-large blue btn waves-effect waves-light submitBtn" id='btn' style="width: 100%">
-                    <h5>
-                      <i class="fab fa-paypal left"></i>1€</h5>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-          
+          </ul>
+          <ul class="side-nav" id="mobile-nav">
+            <h4 class="purple-text text-darken-4 center">Super IPtv</h4>
+            <li>
+              <div class="divider"></div>
+            </li>
+            <li>
+              <a href="index.html">
+                <i class="fa fa-home grey-text text-darken-4"></i>Accueil</a>
+            </li>
+            <li>
+              <a href="tuto.html">
+                <i class="fa fa-cog grey-text text-darken-4"></i>tutorial</a>
+            </li>
+            <li>
+              <a href="solutions.html">
+                <i class="fa fa-users grey-text text-darken-4"></i> Nos offres</a>
+            </li>
+          </ul>
+        </div>
       </div>
-     
+    </nav>
+
+
+  </header>
+
+
+  <div class="section container">
+    <h3 class="center-align">DÉCOUVREZ NOS OFFRES ABONNEMENT IPTV : </h3>
+    <hr>
+    <h5>
+      <strong>Note</strong> : après le payement vous serez redirigé vers une page qui contient votre code d'abonnement </h5>
+    <div class="row">
+      <div class="col m4 s12">
+        <div class="card hoverable">
+          <div class="card-image">
+            <img src="img/bg2.jpg">
+            <span class="card-title center-align">Abonnement IPTV PREMIUM - 3 mois</span>
+          </div>
+          <div class="card-content">
+            <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
+          </div>
+          <div class="card-action">
+            <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
+              <input type="hidden" name="id" value="1">
+              <input type="hidden" class="email" name="email">
+              <button class="btn-large blue btn waves-effect waves-light submitBtn" style="width: 100%">
+                <h5>
+                  <i class="fab fa-paypal left"></i>15€</h5>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m4 s12">
+        <div class="card hoverable">
+          <div class="card-image">
+            <img src="img/bg2.jpg">
+            <span class="card-title center-align">Abonnement IPTV PREMIUM - 6 mois</span>
+          </div>
+          <div class="card-content">
+            <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
+          </div>
+          <div class="card-action">
+            <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
+              <input type="hidden" name="id" value="2">
+              <input type="hidden" class="email" name="email">
+              <button class="btn-large blue btn waves-effect waves-light submitBtn" style="width: 100%">
+                <h5>
+                  <i class="fab fa-paypal left"></i>25€</h5>
+              </button>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col m4 s12">
+        <div class="card hoverable">
+          <div class="card-image">
+            <img src="img/bg2.jpg">
+            <span class="card-title center-align">Abonnement IPTV PREMIUM - 12 mois</span>
+          </div>
+          <div class="card-content">
+            <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
+          </div>
+          <div class="card-action">
+            <form action="http://127.0.0.1:4000/pay" method="post">
+              <input type="hidden" name="id" value="3">
+              <input type="hidden" class="email" name="email">
+              <button class="btn-large blue btn waves-effect waves-light submitBtn" id='btn' style="width: 100%">
+                <h5>
+                  <i class="fab fa-paypal left"></i>35€</h5>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col m4 s12 offset-m4">
+        <div class="card hoverable">
+          <div class="card-image">
+            <img src="img/bg2.jpg">
+            <span class="card-title center-align">Abonnement IPTV PREMIUM -Test 24H</span>
+          </div>
+          <div class="card-content">
+            <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
+          </div>
+          <div class="card-action">
+            <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
+              <input type="hidden" name="id" value="4">
+              <input type="hidden" class="email" name="email">
+              <button class="btn-large blue btn waves-effect waves-light submitBtn" id='btn' style="width: 100%">
+                <h5>
+                  <i class="fab fa-paypal left"></i>1€</h5>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="page-footer deep-purple lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Nous Contacter</h5>
+          <p class="grey-text text-lighten-4">email@gmail.com </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Liens</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="index.html">Accueil</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="solutions.html">Nos Offres</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="tuto.html">Tutorial</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
     </div>
 
 
 
+    <div class="footer-copyright deep-purple darken-1">
+      <div class="container">
+        L.mustapha &copy; 2018
+      </div>
+    </div>
+  </footer>
 
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.button-collapse').sideNav();
+      $('.parallax').parallax();
 
-      <!-- Footer -->
-      <footer class="page-footer deep-purple lighten-1">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Nous Contacter</h5>
-              <p class="grey-text text-lighten-4">email@gmail.com </p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Liens</h5>
-              <ul>
-                <li>
-                  <a class="grey-text text-lighten-3" href="index.html">Accueil</a>
-                </li>
-                <li>
-                  <a class="grey-text text-lighten-3" href="solutions.html">Nos Offres</a>
-                </li>
-                <li>
-                  <a class="grey-text text-lighten-3" href="tuto.html">Tutorial</a>
-                </li>
-      
-              </ul>
-            </div>
-          </div>
-        </div>
+      $('.submitBtn').click(function (e) {
+        console.log('hi')
+        e.preventDefault()
+        var email = prompt('entrez votre email : ');
+        var re = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (re.test(String(email).toLowerCase())) {
+          $('.email').val(email);
+          e.target.closest('form').submit()
+          document.querySelector('.spinner.loading').style.display = "block";
+        }
+      })
 
+    });
 
+  </script>
+</body>
 
-        <div class="footer-copyright deep-purple darken-1">
-          <div class="container">
+</html>
