@@ -117,13 +117,11 @@
             <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
           </div>
           <div class="card-action">
-            <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
-              <input type="hidden" name="id" value="1">
-              <input type="hidden" class="email" name="email">
-              <button class="btn-large blue btn waves-effect waves-light submitBtn" style="width: 100%">
+
+              <a class="btn-large blue btn waves-effect waves-light submitBtn" href="/buy.html?id=1" style="width: 100%">
                 <h5>
                   <i class="fab fa-paypal left"></i>15€</h5>
-              </button>
+              </a>
             </form>
           </div>
         </div>
@@ -139,15 +137,10 @@
             <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
           </div>
           <div class="card-action">
-            <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
-              <input type="hidden" name="id" value="2">
-              <input type="hidden" class="email" name="email">
-              <button class="btn-large blue btn waves-effect waves-light submitBtn" style="width: 100%">
+              <a class="btn-large blue btn waves-effect waves-light submitBtn" href="/buy.html?id=2" style="width: 100%">
                 <h5>
                   <i class="fab fa-paypal left"></i>25€</h5>
-              </button>
-              </button>
-            </form>
+              </a>
           </div>
         </div>
       </div>
@@ -161,14 +154,12 @@
             <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
           </div>
           <div class="card-action">
-            <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
-              <input type="hidden" name="id" value="3">
-              <input type="hidden" class="email" name="email">
-              <button class="btn-large blue btn waves-effect waves-light submitBtn" id='btn' style="width: 100%">
+           
+              <a class="btn-large blue btn waves-effect waves-light submitBtn" href="/buy.html?id=3" style="width: 100%">
                 <h5>
                   <i class="fab fa-paypal left"></i>35€</h5>
-              </button>
-            </form>
+              </a>
+
           </div>
         </div>
       </div>
@@ -182,14 +173,10 @@
             <p>Abonnement IPTV Compatible avec : Smart IPTV , MAG , Android, PC , Apple iOS.</p>
           </div>
           <div class="card-action">
-            <form action="https://iptv-chafik.herokuapp.com/pay" method="post">
-              <input type="hidden" name="id" value="4">
-              <input type="hidden" class="email" name="email">
-              <button class="btn-large blue btn waves-effect waves-light submitBtn" id='btn' style="width: 100%">
+              <a class="btn-large blue btn waves-effect waves-light submitBtn" id='btn' href="/buy.html?id=4" style="width: 100%">
                 <h5>
                   <i class="fab fa-paypal left"></i>1€</h5>
-              </button>
-            </form>
+              </a>
           </div>
         </div>
       </div>
@@ -240,22 +227,10 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script>
+    
     $(document).ready(function () {
       $('.button-collapse').sideNav();
       $('.parallax').parallax();
-
-      $('.submitBtn').click(function (e) {
-        console.log('hi')
-        e.preventDefault()
-        var email = prompt('entrez votre email : ');
-        var re = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        if (re.test(String(email).toLowerCase())) {
-          $('.email').val(email);
-          e.target.closest('form').submit()
-          document.querySelector('.spinner.loading').style.display = "block";
-        }
-      })
-
     });
 
   </script>
